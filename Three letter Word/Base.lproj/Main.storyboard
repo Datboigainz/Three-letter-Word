@@ -70,9 +70,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="JXJ-i8-JQc"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="PLq-Z7-GYg" appends="YES" id="JtN-jH-1I9"/>
+                                        </connections>
                                     </stackView>
                                 </subviews>
                             </stackView>
@@ -85,8 +89,20 @@
                             <constraint firstItem="V1p-oy-Jav" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="fXH-0L-r10"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="currentLetter" destination="yW5-Io-pgf" id="V1s-YD-cvo"/>
+                        <outlet property="horizontalStack" destination="wqp-EC-wgw" id="buS-1K-6cy"/>
+                        <outletCollection property="letterLabel" destination="Eag-fP-giq" collectionClass="NSMutableArray" id="eDH-Bv-Bqh"/>
+                        <outletCollection property="letterLabel" destination="q13-7y-DfS" collectionClass="NSMutableArray" id="rsz-3i-vTe"/>
+                        <outletCollection property="letterLabel" destination="VBQ-CX-sEz" collectionClass="NSMutableArray" id="hkh-go-hs4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="PLq-Z7-GYg">
+                    <connections>
+                        <action selector="whenTapped:" destination="BYZ-38-t0r" id="Lbj-o5-LYh"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="78.348214285714278"/>
         </scene>
