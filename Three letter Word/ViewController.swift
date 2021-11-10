@@ -18,6 +18,7 @@ class ViewController: UIViewController
    
     var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
     var currentLetterA = "A"
+    var counter = 0
     
     override func viewDidLoad()
     {
@@ -27,9 +28,30 @@ class ViewController: UIViewController
 
     @IBAction func whenTapped(_ sender: UITapGestureRecognizer)
     {
+     // letter and label
+        currentLetterA = letters[counter]
+        currentLetter.text = currentLetterA
+        let selectedPoint = sender.location(in:horizontalStack)
+        
+        for label in
+            letterLabel
+        {
+            if label.frame.contains(selectedPoint)
+            {
+                label.text = "\(currentLetterA)"
+            }
+        }
+         counter = 0
+        currentLetterA =
+            letters[counter]
+        currentLetter.text =
+         currentLetterA
+        for label in
+            self.letterLabel{
+            label.text = "?"        }
         
         
     }
-    
+   
 }
 
